@@ -1,0 +1,15 @@
+# node modules
+node_modules
+
+# cache
+.cache
+.parcel-cache
+
+# macOS
+.DS_Store
+
+# webstrom
+.idea/
+
+# package
+dist

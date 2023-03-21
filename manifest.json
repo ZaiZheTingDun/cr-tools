@@ -1,0 +1,42 @@
+{
+  "name": "CR-Tools",
+  "version": "0.0.0.1",
+  "manifest_version": 3,
+  "description": "Code Review Tools.",
+  "icons": {
+    "16": "icons/code_review-16.png",
+    "32": "icons/code_review-32.png",
+    "48": "icons/code_review-48.png",
+    "128": "icons/code_review-128.png"
+  },
+  "browser_action": {
+    "default_popup": "default.html"
+  },
+  "options_ui": {
+    "page": "options.html"
+  },
+  "background": {
+    "service_worker": "src/background/index.ts",
+    "type": "module"
+  },
+  "omnibox": { "keyword" : "cr1" },
+  "permissions": [
+    "activeTab",
+    "notifications",
+    "webRequestBlocking",
+    "contextMenus",
+    "declarativeContent",
+    "webRequest",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "lib/jquery.min.js"
+      ]
+    }
+  ]
+}
