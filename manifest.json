@@ -9,33 +9,42 @@
     "48": "icons/code_review-48.png",
     "128": "icons/code_review-128.png"
   },
-  "browser_action": {
+  "action": {
     "default_popup": "default.html"
   },
   "options_ui": {
-    "page": "options.html"
+    "page": "options.html",
+    "open_in_tab": true
   },
   "background": {
     "service_worker": "src/background/index.ts",
     "type": "module"
   },
-  "omnibox": { "keyword" : "cr1" },
+  "commands": {
+    "open-all-items": {
+      "suggested_key": {
+        "default": "Ctrl+O",
+        "mac": "Ctrl+O"
+      },
+      "description": "Open each item on a new tab."
+    }
+  },
   "permissions": [
     "activeTab",
     "notifications",
-    "webRequestBlocking",
     "contextMenus",
     "declarativeContent",
     "webRequest",
     "storage"
   ],
+  "host_permissions": [
+    "https://api.github.com/"
+  ],
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
+      "matches": ["https://github.com/*"],
       "js": [
-        "lib/jquery.min.js"
+        "src/content/content-script.ts"
       ]
     }
   ]
