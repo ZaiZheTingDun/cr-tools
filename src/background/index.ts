@@ -103,6 +103,9 @@ chrome.commands.onCommand.addListener(async (command) => {
     case "open-all-items":
       await openAllItems();
       break;
+    case "finish-review":
+      await finishReview();
+      break;
     default:
   }
 });

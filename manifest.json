@@ -24,9 +24,16 @@
     "open-all-items": {
       "suggested_key": {
         "default": "Ctrl+O",
-        "mac": "Ctrl+O"
+        "mac": "MacCtrl+O"
       },
       "description": "Open each item on a new tab."
+    },
+    "finish-review": {
+      "suggested_key": {
+        "default": "Alt+1",
+        "mac": "Alt+1"
+      },
+      "description": "Finish the review of current pull request."
     }
   },
   "permissions": [
