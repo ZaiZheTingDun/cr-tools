@@ -4,7 +4,8 @@
   "description": "Code Review Tools.",
   "scripts": {
     "dev": "npx parcel manifest.json",
-    "build": "npx parcel build manifest.json --no-optimize"
+    "build": "npx parcel build manifest.json --no-optimize",
+    "prod": "npx parcel build manifest.json"
   },
   "author": "",
   "license": "MIT",
@@ -29,7 +30,12 @@
     "typescript": "^5.0.2"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@fluentui/react-components": "^9.18.3",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/material": "^5.11.14",
+    "notistack": "^3.0.1",
     "octokit": "^2.0.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

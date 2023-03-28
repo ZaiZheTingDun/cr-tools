@@ -51,7 +51,7 @@
     {
       "matches": ["https://github.com/*"],
       "js": [
-        "src/content/content-script.ts"
+        "src/content/index.tsx"
       ]
     }
   ]
