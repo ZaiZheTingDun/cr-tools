@@ -11,7 +11,7 @@ const App = () => {
       const links = document.querySelectorAll<HTMLLinkElement>('#issues_dashboard .Box .Box-row a.markdown-title');
       if (links) {
         for (const link of links) {
-          window.open(link.href, '_blank');
+          window.open(`${link.href}/files`, '_blank');
         }
       }
     }
