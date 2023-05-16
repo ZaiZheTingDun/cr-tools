@@ -1,6 +1,6 @@
+import * as React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./components/App";
-import React from "react";
 
 const divElement = document.createElement("div");
 divElement.setAttribute("id", "cr-tools-root");

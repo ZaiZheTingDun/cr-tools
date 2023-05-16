@@ -1,4 +1,5 @@
-import React, { useEffect, useId, useState } from 'react';
+import * as React from 'react';
+import { useEffect, useId, useState } from "react";
 import { Button, Input, Label, makeStyles, shorthands } from "@fluentui/react-components";
 
 const useStyles = makeStyles({

@@ -1,5 +1,5 @@
+import * as React from "React";
 import { createRoot } from "react-dom/client";
-import React from "React";
 import App from './App';
 import { FluentProvider, teamsLightTheme } from "@fluentui/react-components";
 

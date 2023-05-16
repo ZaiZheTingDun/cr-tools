@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import * as React from 'react';
+import { useEffect } from "react";
 import { Octokit } from "octokit";
 import { ActionType } from "../../types/types";
 import { SnackbarProvider, useSnackbar } from "notistack";
@@ -10,9 +11,9 @@ const App = () => {
     const openCodeReviewLinks = () => {
       const links = document.querySelectorAll<HTMLLinkElement>('#issues_dashboard .Box .Box-row a.markdown-title');
       if (links) {
-        for (const link of links) {
+        links.forEach(link => {
           window.open(`${link.href}/files`, '_blank');
-        }
+        })
       }
     }
 
@@ -21,7 +22,7 @@ const App = () => {
       const regexResult = /https:\/\/github.com\/(.+)\/(.+)\/pull\/(\d+).*/.exec(href);
       const owner = regexResult[1];
       const repo = regexResult[2];
-      const pullNumber = regexResult[3];
+      const pullNumber = Number.parseInt(regexResult[3]);
 
       const configuration = await chrome.storage.local.get();
 
