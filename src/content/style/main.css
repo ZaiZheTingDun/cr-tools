@@ -1,0 +1,7 @@
+.diffbar-range-menu details-menu.select-menu-modal {
+    width: 600px;
+}
+
+.select-menu-list .select-menu-item-text > div {
+    max-width: none;
+}

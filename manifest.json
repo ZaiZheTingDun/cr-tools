@@ -50,9 +50,8 @@
   "content_scripts": [
     {
       "matches": ["https://github.com/*"],
-      "js": [
-        "src/content/index.tsx"
-      ]
+      "js": ["src/content/index.tsx"],
+      "css": ["src/content/style/main.css"]
     }
   ]
 }
