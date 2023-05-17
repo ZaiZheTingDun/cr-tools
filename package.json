@@ -1,6 +1,6 @@
 {
   "name": "cr-tools",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Code Review Tools.",
   "scripts": {
     "dev": "npx parcel manifest.json",
